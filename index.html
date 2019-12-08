@@ -234,8 +234,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>前几天闲来无事做了个网页作为浏览器主页，代码比较短。</p>
-<p>/*<!DOCTYPE html></p>
-<html lang="en">
+<p>/*&lt;!DOCTYPE html</p>
+<html lang="en"
 <head>
     <meta charset="UTF-8">
     <title>时间煮雨</title>
@@ -321,335 +321,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>星火杯网页设计（只有html,css,js。jQuery还没学，技术粗糙。。）<br>/*<!DOCTYPE html></p>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>星火杯简介</title>
-    <meta name="keywords" content="西电，星火杯" />
-    <meta name="description" content="星火杯简介" />
-    <meta name="author" content="郭子淳" />
-    <style>
-      body {
-        margin: 0;
-        font-family: 微软雅黑;
-        padding: 10px;
-        background-image: url(e.jpg);
-      }
-      .input1 {
-        width: 100%;
-        height: 25px;
-        padding: 19px 8px;
-        box-sizing: border-box;
-        position: absolute;
-        color: black;
-        cursor: text;
-        display: block;
-      }
-      .button1 {
-        text-align: center;
-        background-color: dodgerblue;
-        color: black;
-        width: 60px;
-        height: 30px;
-        top: 0;
-        left: 25%;
-        border-radius: 10px;
-        box-sizing: border-box;
-        cursor: pointer;
-        border: black 1px solid;
-      }
-      .button1:active {
-        text-align: center;
-        background-color: cornflowerblue;
-        color: black;
-      }
-      .button2 {
-        text-align: center;
-        background-color: white;
-        color: black;
-        width: 60px;
-        height: 30px;
-        top: 0;
-        left: 17%;
-        border-radius: 10px;
-        box-sizing: border-box;
-        cursor: pointer;
-        border: black 1px solid;
-      }
-      .button2:active {
-        text-align: center;
-        background-color: cornsilk;
-        color: black;
-      }
-      .button3 {
-        background-color: gold;
-        color: snow;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-      }
-      .button4 {
-        background-color: salmon;
-        color: snow;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-      }
-      .input {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-      }
-      .denglu {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        position: fixed;
-        display: none;
-      }
-      .denglucontent {
-        width: 60%;
-        margin: 7% auto auto auto;
-        background-image: url(15png);
-        background-size: cover;
-        padding: 2% 8%;
-        border: solid black 1px;
-      }
-      .zhuce {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        position: fixed;
-        display: none;
-      }
-      .zhucecontent {
-        width: 60%;
-        margin: 4% auto auto auto;
-        background-image: url(16-恢复的.png);
-        background-size: cover;
-        padding: 2% 8%;
-        border: solid black 1px;
-      }
-      .close {
-        color: rgba(171, 171, 171, 0.67);
-        font-weight: bold;
-        font-size: 35px;
-        top: 15%;
-        right: 20%;
-        position: absolute;
-        cursor: pointer;
-      }
-      .close:hover {
-        color: rgba(171, 171, 171, 1);
-        font-weight: bold;
-        font-size: 35px;
-        top: 15%;
-        right: 20%;
-      }
-      .show {
-        -webkit-amination: show 0.5s;
-      }
-      @-webkit-keyframes show {
-        from {
-          -webkit-transform: scale(0.4);
-        }
-        to {
-          -webkit-transform: scale(1);
-        }
-      }
-      .music {
-        margin-left: 35%;
-        width: 30%;
-        height: 60px;
-        position: sticky;
-        top: 0;
-        float: left;
-      }
-      .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-      }
-      @-webkit-keyframes fade {
-        from {
-          opacity: 0.1;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      .rongqi {
-        position: relative;
-        margin-left: 200px;
-        max-width: 713px;
-        height: 479px;
-        padding: 3px;
-      }
-      .container {
-        display: none;
-      }
-      .text {
-        color: white;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-      }
-      .shang,
-      .xia {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 17px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-      }
-      .xia {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-      .shang:hover,
-      .xia:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-      }
-      span > a {
-        color: cornsilk;
-        font-size: large;
-      }
-      .deng {
-        position: fixed;
-        top: 0px;
-        right: 80px;
-      }
-      .menu {
-        background-color: #b3d4fc;
-        color: deepskyblue;
-        width: 150px;
-        height: 60px;
-        border: 1px solid black;
-        position: fixed;
-        bottom: 40%;
-        right: 2%;
-        border-radius: 15px 15px 15px;
-        box-shadow: 6px 6px 6px black;
-        cursor: pointer;
-      }
-      .menu1 {
-        display: none;
-        position: relative;
-        border-radius: 15px 15px 15px 15px;
-        background-color: white;
-        box-shadow: 6px 6px 6px black;
-      }
-      .menu1 a {
-        padding: 10px;
-        color: black;
-        height: 20px;
-        display: block;
-        text-decoration: none;
-      }
-      .a1 {
-        padding: 10px;
-        color: black;
-        display: block;
-        text-decoration: none;
-      }
-      .a1:hover {
-        background-color: darkturquoise;
-        color: snow;
-        border-radius: 15px 15px 0 0;
-      }
-      .a2 {
-        padding: 10px;
-        color: black;
-        display: block;
-        text-decoration: none;
-      }
-      .a2:hover {
-        background-color: darkturquoise;
-        color: snow;
-        border-radius: 0 0 15px 15px;
-      }
-      .menu1 a:hover {
-        background-color: darkturquoise;
-        color: snow;
-      }
-      .menu:hover .menu1 {
-        display: block;
-      }
-      .biankuang {
-        border: 1px cyan solid;
-        outline: 2px gold dotted;
-      }
-      .xiaohui {
-        position: fixed;
-        top: 100px;
-        right: 60px;
-      }
-      .biaozhi {
-        position: fixed;
-        top: 215px;
-        right: 35px;
-      }
-      .header1 {
-        margin-left: 10%;
-        width: 75%;
-        height: 410px;
-        clear: both;
-      }
-      .header2 {
-        margin-left: 10%;
-        height: 40px;
-        padding: 0px 0px 10px;
-        text-align: center;
-        margin-right: 15%;
-        clear: both;
-      }
-      .header2 h1 {
-        font-size: 50px;
-      }
-      .ul1 {
-        list-style-type: none;
-        margin-top: 0;
-        padding: 0;
-        width: 10%;
-        background-color: #f1f1f1;
-        position: fixed;
-        height: 100%;
-        overflow: auto;
-      }
-      .ul1 li {
-        display: block;
-      }
-      .ul1 li a {
-        display: block;
-        color: #000;
-        padding: 8px 16px;
-        text-decoration: none;
-        height: 25px;
-        border-bottom: white solid 1px;
-      }
-
+        <p>星火杯网页设计（只有html,css,js。jQuery还没学，技术粗糙。。）<br>/*<!DOCTYPE html
+html lang="en"><br>  <head><br>    <meta charset="UTF-8" /><br>    <title>星火杯简介</title><br>    <meta name="keywords" content="西电，星火杯" /><br>    <meta name="description" content="星火杯简介" /><br>    <meta name="author" content="郭子淳" /><br>    <style><br>      body {<br>        margin: 0;<br>        font-family: 微软雅黑;<br>        padding: 10px;<br>        background-image: url(e.jpg);<br>      }<br>      .input1 {<br>        width: 100%;<br>        height: 25px;<br>        padding: 19px 8px;<br>        box-sizing: border-box;<br>        position: absolute;<br>        color: black;<br>        cursor: text;<br>        display: block;<br>      }<br>      .button1 {<br>        text-align: center;<br>        background-color: dodgerblue;<br>        color: black;<br>        width: 60px;<br>        height: 30px;<br>        top: 0;<br>        left: 25%;<br>        border-radius: 10px;<br>        box-sizing: border-box;<br>        cursor: pointer;<br>        border: black 1px solid;<br>      }<br>      .button1:active {<br>        text-align: center;<br>        background-color: cornflowerblue;<br>        color: black;<br>      }<br>      .button2 {<br>        text-align: center;<br>        background-color: white;<br>        color: black;<br>        width: 60px;<br>        height: 30px;<br>        top: 0;<br>        left: 17%;<br>        border-radius: 10px;<br>        box-sizing: border-box;<br>        cursor: pointer;<br>        border: black 1px solid;<br>      }<br>      .button2:active {<br>        text-align: center;<br>        background-color: cornsilk;<br>        color: black;<br>      }<br>      .button3 {<br>        background-color: gold;<br>        color: snow;<br>        padding: 14px 20px;<br>        margin: 8px 0;<br>        border: none;<br>        cursor: pointer;<br>        width: 100%;<br>      }<br>      .button4 {<br>        background-color: salmon;<br>        color: snow;<br>        padding: 14px 20px;<br>        margin: 8px 0;<br>        border: none;<br>        cursor: pointer;<br>        width: 100%;<br>      }<br>      .input {<br>        width: 100%;<br>        padding: 12px 20px;<br>        margin: 8px 0;<br>        display: inline-block;<br>        border: 1px solid #ccc;<br>        box-sizing: border-box;<br>      }<br>      .denglu {<br>        top: 0;<br>        left: 0;<br>        width: 100%;<br>        height: 100%;<br>        background-color: rgba(0, 0, 0, 0.5);<br>        z-index: 1;<br>        position: fixed;<br>        display: none;<br>      }<br>      .denglucontent {<br>        width: 60%;<br>        margin: 7% auto auto auto;<br>        background-image: url(15png);<br>        background-size: cover;<br>        padding: 2% 8%;<br>        border: solid black 1px;<br>      }<br>      .zhuce {<br>        top: 0;<br>        left: 0;<br>        width: 100%;<br>        height: 100%;<br>        background-color: rgba(0, 0, 0, 0.5);<br>        z-index: 1;<br>        position: fixed;<br>        display: none;<br>      }<br>      .zhucecontent {<br>        width: 60%;<br>        margin: 4% auto auto auto;<br>        background-image: url(16-恢复的.png);<br>        background-size: cover;<br>        padding: 2% 8%;<br>        border: solid black 1px;<br>      }<br>      .close {<br>        color: rgba(171, 171, 171, 0.67);<br>        font-weight: bold;<br>        font-size: 35px;<br>        top: 15%;<br>        right: 20%;<br>        position: absolute;<br>        cursor: pointer;<br>      }<br>      .close:hover {<br>        color: rgba(171, 171, 171, 1);<br>        font-weight: bold;<br>        font-size: 35px;<br>        top: 15%;<br>        right: 20%;<br>      }<br>      .show {<br>        -webkit-amination: show 0.5s;<br>      }<br>      @-webkit-keyframes show {<br>        from {<br>          -webkit-transform: scale(0.4);<br>        }<br>        to {<br>          -webkit-transform: scale(1);<br>        }<br>      }<br>      .music {<br>        margin-left: 35%;<br>        width: 30%;<br>        height: 60px;<br>        position: sticky;<br>        top: 0;<br>        float: left;<br>      }<br>      .fade {<br>        -webkit-animation-name: fade;<br>        -webkit-animation-duration: 1.5s;<br>      }<br>      @-webkit-keyframes fade {<br>        from {<br>          opacity: 0.1;<br>        }<br>        to {<br>          opacity: 1;<br>        }<br>      }<br>      .rongqi {<br>        position: relative;<br>        margin-left: 200px;<br>        max-width: 713px;<br>        height: 479px;<br>        padding: 3px;<br>      }<br>      .container {<br>        display: none;<br>      }<br>      .text {<br>        color: white;<br>        font-size: 15px;<br>        padding: 8px 12px;<br>        position: absolute;<br>        bottom: 8px;<br>        width: 100%;<br>        text-align: center;<br>      }<br>      .shang,<br>      .xia {<br>        cursor: pointer;<br>        position: absolute;<br>        top: 50%;<br>        width: auto;<br>        margin-top: -22px;<br>        padding: 17px;<br>        color: white;<br>        font-weight: bold;<br>        font-size: 18px;<br>        transition: 0.6s ease;<br>        border-radius: 0 3px 3px 0;<br>      }<br>      .xia {<br>        right: 0;<br>        border-radius: 3px 0 0 3px;<br>      }<br>      .shang:hover,<br>      .xia:hover {<br>        background-color: rgba(0, 0, 0, 0.5);<br>      }<br>      span &gt; a {<br>        color: cornsilk;<br>        font-size: large;<br>      }<br>      .deng {<br>        position: fixed;<br>        top: 0px;<br>        right: 80px;<br>      }<br>      .menu {<br>        background-color: #b3d4fc;<br>        color: deepskyblue;<br>        width: 150px;<br>        height: 60px;<br>        border: 1px solid black;<br>        position: fixed;<br>        bottom: 40%;<br>        right: 2%;<br>        border-radius: 15px 15px 15px;<br>        box-shadow: 6px 6px 6px black;<br>        cursor: pointer;<br>      }<br>      .menu1 {<br>        display: none;<br>        position: relative;<br>        border-radius: 15px 15px 15px 15px;<br>        background-color: white;<br>        box-shadow: 6px 6px 6px black;<br>      }<br>      .menu1 a {<br>        padding: 10px;<br>        color: black;<br>        height: 20px;<br>        display: block;<br>        text-decoration: none;<br>      }<br>      .a1 {<br>        padding: 10px;<br>        color: black;<br>        display: block;<br>        text-decoration: none;<br>      }<br>      .a1:hover {<br>        background-color: darkturquoise;<br>        color: snow;<br>        border-radius: 15px 15px 0 0;<br>      }<br>      .a2 {<br>        padding: 10px;<br>        color: black;<br>        display: block;<br>        text-decoration: none;<br>      }<br>      .a2:hover {<br>        background-color: darkturquoise;<br>        color: snow;<br>        border-radius: 0 0 15px 15px;<br>      }<br>      .menu1 a:hover {<br>        background-color: darkturquoise;<br>        color: snow;<br>      }<br>      .menu:hover .menu1 {<br>        display: block;<br>      }<br>      .biankuang {<br>        border: 1px cyan solid;<br>        outline: 2px gold dotted;<br>      }<br>      .xiaohui {<br>        position: fixed;<br>        top: 100px;<br>        right: 60px;<br>      }<br>      .biaozhi {<br>        position: fixed;<br>        top: 215px;<br>        right: 35px;<br>      }<br>      .header1 {<br>        margin-left: 10%;<br>        width: 75%;<br>        height: 410px;<br>        clear: both;<br>      }<br>      .header2 {<br>        margin-left: 10%;<br>        height: 40px;<br>        padding: 0px 0px 10px;<br>        text-align: center;<br>        margin-right: 15%;<br>        clear: both;<br>      }<br>      .header2 h1 {<br>        font-size: 50px;<br>      }<br>      .ul1 {<br>        list-style-type: none;<br>        margin-top: 0;<br>        padding: 0;<br>        width: 10%;<br>        background-color: #f1f1f1;<br>        position: fixed;<br>        height: 100%;<br>        overflow: auto;<br>      }<br>      .ul1 li {<br>        display: block;<br>      }<br>      .ul1 li a {<br>        display: block;<br>        color: #000;<br>        padding: 8px 16px;<br>        text-decoration: none;<br>        height: 25px;<br>        border-bottom: white solid 1px;<br>      }</p>
 <pre><code>  .ul1 li a.active {
     background-color: #4caf50;
     color: white;
@@ -1269,96 +942,96 @@
 </html>
 
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html
+<html lang="en"
   <head>
-    <meta charset="UTF-8" />
-    <title>星火杯指南1</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: 微软雅黑;
-        padding: 10px;
-        background-image: url(t.jpg);
-        background-size: cover;
-        background-repeat: repeat;
-      }
-      .input1 {
-        width: 100%;
-        height: 25px;
-        padding: 19px 8px;
-        box-sizing: border-box;
-        position: absolute;
-        color: black;
-        cursor: text;
-        display: block;
-      }
-      .tu {
-        padding: 10%;
-      }
-      .lan1 {
-        width: 60%;
-        float: left;
-        padding: 20px;
-        margin-left: 15%;
-        font-size: small;
-        font-family: Arial;
-      }
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      .header2 {
-        background-image: url();
-        margin-left: 10%;
-        height: 70px;
-        padding: 0px 0px 10px;
-        text-align: center;
-        margin-right: 15%;
-        clear: both;
-      }
-      .header2 h1 {
-        font-size: 50px;
-      }
-      .deng {
-        position: fixed;
-        top: 0px;
-        right: 80px;
-      }
-      .biankuang {
-        border: 1px cyan solid;
-        outline: 2px gold dotted;
-      }
-      .xiaohui {
-        position: fixed;
-        top: 100px;
-        right: 60px;
-      }
-      .biaozhi {
-        position: fixed;
-        top: 215px;
-        right: 35px;
-      }
-      ul {
-        list-style-type: none;
-        margin-top: 0;
-        padding: 0;
-        width: 10%;
-        background-color: #f1f1f1;
-        position: fixed;
-        height: 100%;
-        overflow: auto;
-      }
-      li a {
-        display: block;
-        color: #000;
-        padding: 8px 16px;
-        text-decoration: none;
-        height: 25px;
-      }
+<pre><code>&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;title&gt;星火杯指南1&lt;/title&gt;
+&lt;style&gt;
+  body {
+    margin: 0;
+    font-family: 微软雅黑;
+    padding: 10px;
+    background-image: url(t.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+  }
+  .input1 {
+    width: 100%;
+    height: 25px;
+    padding: 19px 8px;
+    box-sizing: border-box;
+    position: absolute;
+    color: black;
+    cursor: text;
+    display: block;
+  }
+  .tu {
+    padding: 10%;
+  }
+  .lan1 {
+    width: 60%;
+    float: left;
+    padding: 20px;
+    margin-left: 15%;
+    font-size: small;
+    font-family: Arial;
+  }
+  .row:after {
+    content: &quot;&quot;;
+    display: table;
+    clear: both;
+  }
+  .header2 {
+    background-image: url();
+    margin-left: 10%;
+    height: 70px;
+    padding: 0px 0px 10px;
+    text-align: center;
+    margin-right: 15%;
+    clear: both;
+  }
+  .header2 h1 {
+    font-size: 50px;
+  }
+  .deng {
+    position: fixed;
+    top: 0px;
+    right: 80px;
+  }
+  .biankuang {
+    border: 1px cyan solid;
+    outline: 2px gold dotted;
+  }
+  .xiaohui {
+    position: fixed;
+    top: 100px;
+    right: 60px;
+  }
+  .biaozhi {
+    position: fixed;
+    top: 215px;
+    right: 35px;
+  }
+  ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    width: 10%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    height: 25px;
+  }
 
-<pre><code>  li a.active {
+  li a.active {
     background-color: #4caf50;
     color: white;
   }
@@ -1663,100 +1336,100 @@
       </div>
     </div>
   </body>
-</html>
+</html
 
 
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html
+<html lang="en"
   <head>
-    <meta charset="UTF-8" />
-    <title>星火杯指南3</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: 微软雅黑;
-        padding: 10px;
-        background-image: url(t.jpg);
-        background-size: cover;
-        background-repeat: repeat;
-      }
-      .input1 {
-        width: 100%;
-        height: 25px;
-        padding: 19px 8px;
-        box-sizing: border-box;
-        position: absolute;
-        color: black;
-        cursor: text;
-        display: block;
-      }
-      .tu {
-        padding: 10%;
-      }
-      .lan1 {
-        width: 60%;
-        float: left;
-        padding: 20px;
-        margin-left: 15%;
-        font-size: small;
-        font-family: Arial;
-      }
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      .header2 {
-        background-image: url();
-        margin-left: 10%;
-        height: 70px;
-        padding: 0px 0px 10px;
-        text-align: center;
-        margin-right: 15%;
-        clear: both;
-      }
-      .header2 h1 {
-        font-size: 50px;
-      }
-      .deng {
-        position: fixed;
-        top: 0px;
-        right: 80px;
-      }
-      .biankuang {
-        border: 1px cyan solid;
-        outline: 2px gold dotted;
-      }
-      .xiaohui {
-        position: fixed;
-        top: 100px;
-        right: 60px;
-      }
-      .biaozhi {
-        position: fixed;
-        top: 215px;
-        right: 35px;
-      }
-      ul {
-        list-style-type: none;
-        margin-top: 0;
-        padding: 0;
-        width: 10%;
-        background-color: #f1f1f1;
-        position: fixed;
-        height: 100%;
-        overflow: auto;
-      }
-      li a {
-        display: block;
-        color: #000;
-        padding: 8px 16px;
-        text-decoration: none;
-        height: 25px;
-      }
+<pre><code>&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;title&gt;星火杯指南3&lt;/title&gt;
+&lt;style&gt;
+  body {
+    margin: 0;
+    font-family: 微软雅黑;
+    padding: 10px;
+    background-image: url(t.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+  }
+  .input1 {
+    width: 100%;
+    height: 25px;
+    padding: 19px 8px;
+    box-sizing: border-box;
+    position: absolute;
+    color: black;
+    cursor: text;
+    display: block;
+  }
+  .tu {
+    padding: 10%;
+  }
+  .lan1 {
+    width: 60%;
+    float: left;
+    padding: 20px;
+    margin-left: 15%;
+    font-size: small;
+    font-family: Arial;
+  }
+  .row:after {
+    content: &quot;&quot;;
+    display: table;
+    clear: both;
+  }
+  .header2 {
+    background-image: url();
+    margin-left: 10%;
+    height: 70px;
+    padding: 0px 0px 10px;
+    text-align: center;
+    margin-right: 15%;
+    clear: both;
+  }
+  .header2 h1 {
+    font-size: 50px;
+  }
+  .deng {
+    position: fixed;
+    top: 0px;
+    right: 80px;
+  }
+  .biankuang {
+    border: 1px cyan solid;
+    outline: 2px gold dotted;
+  }
+  .xiaohui {
+    position: fixed;
+    top: 100px;
+    right: 60px;
+  }
+  .biaozhi {
+    position: fixed;
+    top: 215px;
+    right: 35px;
+  }
+  ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    width: 10%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    height: 25px;
+  }
 
-<pre><code>  li a.active {
+  li a.active {
     background-color: #4caf50;
     color: white;
   }
@@ -1867,90 +1540,89 @@
 
 
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE htm
+<html lang="en"
   <head>
-    <meta charset="UTF-8" />
-    <title>星火杯过往</title>
-    <style>
-      body {
-        padding: 6px;
-        background-image: url(w.jpg);
-        background-size: cover;
-      }
-      .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-      }
-      @-webkit-keyframes fade {
-        from {
-          opacity: 0.1;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      .rongqi {
-        position: relative;
-        margin: auto;
-        max-width: 1000px;
-      }
-      .shang,
-      .xia {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 17px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-      }
-      .xia {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-      .shang:hover,
-      .xia:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-      }
-      .container {
-        display: none;
-      }
-      .text {
-        color: white;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-      }
-      .number {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
-      .biaoji {
-        cursor: pointer;
-        height: 7px;
-        width: 18px;
-        margin: 0 2px;
-        background-color: #bbb;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-      .active,
-      .biaoji:hover {
-        background-color: #717171;
-      }
-    </style>
-  </head>
+<pre><code>&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;title&gt;星火杯过往&lt;/title&gt;
+&lt;style&gt;
+  body {
+    padding: 6px;
+    background-image: url(w.jpg);
+    background-size: cover;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .rongqi {
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+  }
+  .shang,
+  .xia {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 17px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  .xia {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .shang:hover,
+  .xia:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .container {
+    display: none;
+  }
+  .text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  .number {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .biaoji {
+    cursor: pointer;
+    height: 7px;
+    width: 18px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active,
+  .biaoji:hover {
+    background-color: #717171;
+  }
+&lt;/style&gt;</code></pre>  </head>
   <body>
     <script>
       var a = 1;
@@ -2065,8 +1737,8 @@
       <span class="biaoji" onclick="zhi(11)"></span>
       <span class="biaoji" onclick="zhi(12)"></span>
     </div>
-  </body>
-</html>*/
+  </body
+</html*/
 
       
 
