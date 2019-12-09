@@ -302,6 +302,7 @@
       
         <p>初识51，数码管个位计时（有点垃圾，慢慢加油！）<br>#include&lt;reg52.h&gt;<br>unsigned int code Ledchar[10] = {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};</p>
 <p>void main(){<br>    unsigned int cnt = 0,i;<br>    unsigned int sec = 0;<br>    TMOD = 1;<br>    TH0 = 0xB8;<br>    TL0 = 0X00;<br>    TR0 = 1;<br>    P2 = Ledchar[sec];<br>    while(1){<br>        if(TF0 == 1){<br>            TF0 = 0;<br>            TH0 = 0xB8;<br>            TL0 = 0X00;<br>            cnt++;<br>            P0 = ~(1&lt;&lt;i);<br>            i++;<br>            if(i == 8){<br>                i = 0;<br>            }<br>            if(cnt == 50){<br>                cnt = 0;<br>                sec++;<br>                if(sec == 10){<br>                    sec = 0;<br>                }<br>                P2 = Ledchar[sec];<br>            }<br>        }<br>    }<br>}</p>
+<p>附张图：<br><img src="/wozuicai.github.io/2019/12/08/second/2.png" alt="2"></p>
 
       
 
