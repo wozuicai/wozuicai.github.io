@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://wozuicai.github.io">
   <title>forth | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前段时间无聊写了段短网页作为浏览器首页，挺短的，星火杯的网页太长了html文件不好上传 html： css：@font-face{        font-family: 方正;        src: url(FZZJ-LongYTJW.TTF);    }    .body{        background-image: url(1.jpg);        background-size">
+  <meta name="description" content="前段时间无聊写了段短网页作为浏览器首页，挺短的，星火杯的网页太长了html文件不好上传（最后的鼠标套了模板，进行了一些改进） html： css：@font-face{        font-family: 方正;        src: url(FZZJ-LongYTJW.TTF);    }    .body{        background-image: url(1.jpg);">
 <meta property="og:type" content="article">
 <meta property="og:title" content="forth">
 <meta property="og:url" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;forth&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前段时间无聊写了段短网页作为浏览器首页，挺短的，星火杯的网页太长了html文件不好上传 html： css：@font-face{        font-family: 方正;        src: url(FZZJ-LongYTJW.TTF);    }    .body{        background-image: url(1.jpg);        background-size">
+<meta property="og:description" content="前段时间无聊写了段短网页作为浏览器首页，挺短的，星火杯的网页太长了html文件不好上传（最后的鼠标套了模板，进行了一些改进） html： css：@font-face{        font-family: 方正;        src: url(FZZJ-LongYTJW.TTF);    }    .body{        background-image: url(1.jpg);">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;wozuicai.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;forth&#x2F;1.png">
-<meta property="og:updated_time" content="2019-12-09T05:59:33.744Z">
+<meta property="og:updated_time" content="2019-12-18T14:11:36.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;wozuicai.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;forth&#x2F;1.png">
   
@@ -174,11 +174,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>前段时间无聊写了段短网页作为浏览器首页，挺短的，星火杯的网页太长了html文件不好上传</p>
+        <p>前段时间无聊写了段短网页作为浏览器首页，挺短的，星火杯的网页太长了html文件不好上传<br>（最后的鼠标套了模板，进行了一些改进）</p>
 <p>html：<br><img src="/wozuicai.github.io/2019/12/09/forth/1.png" alt="1"></p>
 <p>css：<br>@font-face{<br>        font-family: 方正;<br>        src: url(FZZJ-LongYTJW.TTF);<br>    }<br>    .body{<br>        background-image: url(1.jpg);<br>        background-size: cover;<br>        background-repeat: no-repeat;<br>    }<br>    #title{<br>        font-size: 100px;<br>        color: aquamarine;<br>        position: absolute;<br>        top: 10%;<br>        left: 36%;<br>        font-family: 方正;<br>    }<br>    #image1{<br>        position: absolute;<br>        top: 10%;<br>        left: 3%;<br>        animation: display 5.5s infinite linear;<br>    }<br>    @keyframes display{<br>        4% {opacity: 1;}<br>        8% {opacity: 1;}<br>        12% {opacity: 0.9;}<br>        16% {opacity: 0.8;}<br>        20% {opacity: 0.7;}<br>        24% {opacity: 0.6;}<br>        28% {opacity: 0.5;}<br>        32% {opacity: 0.4;}<br>        36% {opacity: 0.3;}<br>        40% {opacity: 0.2;}<br>        44% {opacity: 0.1;}<br>        48% {opacity: 0;}<br>        52% {opacity: 0;}<br>        56% {opacity: 0;}<br>        60% {opacity: 0;}<br>        64% {opacity: 0.1;}<br>        68% {opacity: 0.2;}<br>        72% {opacity: 0.25;}<br>        76% {opacity: 0.3;}<br>        80% {opacity: 0.4;}<br>        84% {opacity: 0.5;}<br>        88% {opacity: 0.6;}<br>        92% {opacity: 0.7;}<br>        96% {opacity: 0.8;}<br>        100% {opacity: 0.9;}<br>    }<br>    #image2{<br>        position: absolute;<br>        top: 6%;<br>        right: 4%;<br>        transition: linear;<br>        opacity: 1;<br>        display: block;<br>        width: 80px;<br>    }<br>    .audio{<br>        position: absolute;<br>        left: 25%;<br>        width: 50%;<br>        height: 50px;<br>    }</p>
 <p>js：<br>function sizeup(){<br>    var image2 = document.getElementById(“image2”);<br>    image2.style.opacity = “0.5”;<br>    image2.style.width = “100px”;<br>    image2.style.top = “5.5%”;<br>    image2.style.right = “3.5%”;<br>}</p>
 <p>function sizedown(){<br>    var image2 = document.getElementById(“image2”);<br>    image2.style.opacity = “1”;<br>    image2.style.width = “80px”;<br>    image2.style.top = “6%”;<br>    image2.style.right = “4%”;<br>}</p>
+<p>(function(){<br>    window.onclick = function(event){</p>
+<pre><code>    var heart = document.createElement(&quot;b&quot;);
+    heart.onselectstart = new Function(&apos;event.returnValue=false&apos;);
+    document.body.appendChild(heart).innerHTML = &quot;❤&quot;;    
+    heart.style.cssText = &quot;position: fixed;left:-100%;&quot;;
+
+    var f = 16,     
+        x = event.clientX - f / 2, 
+        y = event.clientY - f, 
+        c = randomColor(),  
+        a = 1,                 
+        s = 1.2;             
+
+    var timer = setInterval(function(){        
+        if(a &lt;= 0){
+            document.body.removeChild(heart);
+            clearInterval(timer);
+        }else{
+            heart.style.cssText = &quot;font-size:16px;cursor: default;position: fixed;color:&quot; + c + &quot;;left:&quot; + x + &quot;px;top:&quot; + y + &quot;px;opacity:&quot; + a + &quot;;transform:scale(&quot; + s + &quot;);&quot;;
+            y--;
+            a -= 0.016;
+            s += 0.002;
+        }
+    },15)
+
+}
+function randomColor() {
+    return &quot;rgb(&quot; + (~~(Math.random() * 255)) + &quot;,&quot; + (~~(Math.random() * 255)) + &quot;,&quot; + (~~(Math.random() * 255)) + &quot;)&quot;;
+}</code></pre><p>}());</p>
 
       
 
