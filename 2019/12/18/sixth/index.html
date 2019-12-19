@@ -8,13 +8,17 @@
   <link rel="dns-prefetch" href="https://wozuicai.github.io">
   <title>sixth | My world 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="一个点阵 I LOVE U代码：#include&amp;lt;reg52.h&amp;gt;unsigned char img[] &#x3D; {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xC3,0xE7,0xE7,0xE7,0xE7,0xE7,0xC3,0xFF,0x99,0x00,0x00,0x00,0x81,0xC3,0xE7,0xFF,0x99,0x99,0x99,0x9">
+<meta property="og:type" content="article">
 <meta property="og:title" content="sixth">
 <meta property="og:url" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;sixth&#x2F;index.html">
 <meta property="og:site_name" content="My world 的博客">
+<meta property="og:description" content="一个点阵 I LOVE U代码：#include&amp;lt;reg52.h&amp;gt;unsigned char img[] &#x3D; {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xC3,0xE7,0xE7,0xE7,0xE7,0xE7,0xC3,0xFF,0x99,0x00,0x00,0x00,0x81,0xC3,0xE7,0xFF,0x99,0x99,0x99,0x9">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-18T14:06:33.024Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;wozuicai.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;sixth&#x2F;6.png">
+<meta property="og:updated_time" content="2019-12-19T08:11:35.019Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;wozuicai.github.io&#x2F;2019&#x2F;12&#x2F;18&#x2F;sixth&#x2F;6.png">
   
     <link rel="alternative" href="/atom.xml" title="My world 的博客" type="application/atom+xml">
   
@@ -170,7 +174,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>一个点阵 I LOVE U<br>代码：<br>#include&lt;reg52.h&gt;<br>unsigned char img[] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xC3,0xE7,0xE7,0xE7,0xE7,0xE7,0xC3,0xFF,0x99,0x00,0x00,0x00,0x81,0xC3,0xE7,0xFF,0x99,0x99,0x99,0x99,0x99,0x81,0xC3,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF };<br>int t = 0;<br>int cnt = 0;<br>int index = 0;</p>
+<p>void main(){<br>        EA = 1;<br>        TMOD = 0x01;<br>        TH0 = 0xFC;<br>        TL0 = 0x67;<br>        ET0 = 1;<br>        TR0 = 1;<br>        while(1);<br>}</p>
+<p>void interruptT0()interrupt 1{<br>        TH0 = 0xFC;<br>        TL0 = 0x67;<br>        P2 = (0x01&lt;&lt;cnt);<br>        P0 = 0xFF;<br>        P0 = img[cnt + index];<br>        cnt++;<br>        if(cnt == 8){<br>            cnt = 0;<br>        }<br>        t++;<br>        if(t &gt;= 250){<br>            index++;<br>            t = 0;<br>            if(index &gt;= 33){<br>                index = 0;<br>            }<br>        }<br>}</p>
+<p>附图：<br><img src="/wozuicai.github.io/2019/12/18/sixth/6.png" alt="6"></p>
+
       
 
       

@@ -171,7 +171,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>一个点阵 I LOVE U<br>代码：<br>#include&lt;reg52.h&gt;<br>unsigned char img[] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xC3,0xE7,0xE7,0xE7,0xE7,0xE7,0xC3,0xFF,0x99,0x00,0x00,0x00,0x81,0xC3,0xE7,0xFF,0x99,0x99,0x99,0x99,0x99,0x81,0xC3,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF };<br>int t = 0;<br>int cnt = 0;<br>int index = 0;</p>
+<p>void main(){<br>        EA = 1;<br>        TMOD = 0x01;<br>        TH0 = 0xFC;<br>        TL0 = 0x67;<br>        ET0 = 1;<br>        TR0 = 1;<br>        while(1);<br>}</p>
+<p>void interruptT0()interrupt 1{<br>        TH0 = 0xFC;<br>        TL0 = 0x67;<br>        P2 = (0x01&lt;&lt;cnt);<br>        P0 = 0xFF;<br>        P0 = img[cnt + index];<br>        cnt++;<br>        if(cnt == 8){<br>            cnt = 0;<br>        }<br>        t++;<br>        if(t &gt;= 250){<br>            index++;<br>            t = 0;<br>            if(index &gt;= 33){<br>                index = 0;<br>            }<br>        }<br>}</p>
+<p>附图：<br><img src="/wozuicai.github.io/2019/12/18/sixth/6.png" alt="6"></p>
+
       
 
       
