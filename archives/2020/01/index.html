@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wozuicai.github.io">
-  <title>third | My world 的博客</title>
+  <title>Archives: 2020/1 | My world 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端时间看来一本python搭建三层神经网络的书，写了一个代码，用mnist训练集训练，正确率有96%，虽然有一些数学逻辑不是很懂，但是还是不错 上代码import numpyimport scipy.special class Neural: def __init__(self, inputnodes, hiddennodes, outputnodes, learningrate):     s">
-<meta property="og:type" content="article">
-<meta property="og:title" content="third">
-<meta property="og:url" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;2019&#x2F;12&#x2F;08&#x2F;third&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="My world 的博客">
+<meta property="og:url" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;archives&#x2F;2020&#x2F;01&#x2F;index.html">
 <meta property="og:site_name" content="My world 的博客">
-<meta property="og:description" content="前端时间看来一本python搭建三层神经网络的书，写了一个代码，用mnist训练集训练，正确率有96%，虽然有一些数学逻辑不是很懂，但是还是不错 上代码import numpyimport scipy.special class Neural: def __init__(self, inputnodes, hiddennodes, outputnodes, learningrate):     s">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;wozuicai.github.io&#x2F;2019&#x2F;12&#x2F;08&#x2F;third&#x2F;3.png">
-<meta property="og:updated_time" content="2019-12-18T14:17:36.025Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;wozuicai.github.io&#x2F;wozuicai.github.io&#x2F;2019&#x2F;12&#x2F;08&#x2F;third&#x2F;3.png">
   
     <link rel="alternative" href="/atom.xml" title="My world 的博客" type="application/atom+xml">
   
@@ -154,213 +149,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-third" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      third
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/wozuicai.github.io/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/wozuicai.github.io/2020/01/06/seventh/" class="archive-article-date">
+  	<time datetime="2020-01-06T12:12:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/wozuicai.github.io/2020/01/06/seventh/">seventh</a>
     </h1>
   
 
-        
-        <a href="/wozuicai.github.io/2019/12/08/third/" class="archive-article-date">
-  	<time datetime="2019-12-08T13:38:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前端时间看来一本python搭建三层神经网络的书，写了一个代码，用mnist训练集训练，正确率有96%，虽然有一些数学逻辑不是很懂，但是还是不错<br> 上代码<br>import numpy<br>import scipy.special</p>
-<p>class Neural:</p>
-<pre><code>def __init__(self, inputnodes, hiddennodes, outputnodes, learningrate):
-    self.inodes = inputnodes
-    self.hnodes = hiddennodes
-    self.onodes = outputnodes
-    self.lr = learningrate
-    self.wih = numpy.random.normal(0.0, pow(self.hnodes, -0.5), (self.hnodes, self.inodes))
-    self.who = numpy.random.normal(0.0, pow(self.onodes, -0.5), (self.onodes, self.hnodes))
-    self.activation_function = lambda x: scipy.special.expit(x)
-    pass
+        <div class="article-info info-on-right">
+          
+          
 
-def train(self, input_list, targets_list):
-    inputs = numpy.array(input_list, ndmin=2).T
-    targets = numpy.array(targets_list, ndmin=2).T
-    hidden_inputs = numpy.dot(self.wih, inputs)
-    hidden_outputs = self.activation_function(hidden_inputs)
-    final_inputs = numpy.dot(self.who, hidden_outputs)
-    final_outputs = self.activation_function(final_inputs)
-    output_errors = targets - final_outputs
-    hidden_errors = numpy.dot(self.who.T, output_errors)
-    self.who += self.lr * numpy.dot(output_errors * final_outputs * (1.0 - final_outputs),
-                                    numpy.transpose(hidden_outputs))
-    self.wih += self.lr * numpy.dot(hidden_errors * hidden_outputs * (1.0 - hidden_outputs),
-                                    numpy.transpose(inputs))
-    pass
-
-def query(self, input_list):
-    inputs = numpy.array(input_list, ndmin=2).T
-    hidden_inputs = numpy.dot(self.wih, inputs)
-    hidden_outputs = self.activation_function(hidden_inputs)
-    final_inputs = numpy.dot(self.who, hidden_outputs)
-    final_outputs = self.activation_function(final_inputs)
-    return final_outputs</code></pre><a id="more"></a>
-<p>input_nodes = 784<br>hidden_nodes = 100<br>output_nodes = 10<br>learning_rate = 0.2<br>n = Neural(input_nodes, hidden_nodes, output_nodes, learning_rate)<br>train_data_file = open(“mnist_train.csv”, ‘r’)<br>train_data_list = train_data_file.readlines()<br>train_data_file.close()<br>epochs = 5<br>for e in range(epochs):<br>    for record in train_data_list:<br>        all_values = record.split(‘,’)<br>        scale_input = (numpy.asfarray(all_values[1:]) / 255.0 * 0.99) + 0.01<br>        target = numpy.zeros(output_nodes) + 0.01<br>        target[int(all_values[0])] = 0.99<br>        n.train(scale_input, target)<br>        pass<br>    pass<br>test_data_file = open(“mnist_test.csv”, ‘r’)<br>test_data_list = test_data_file.readlines()<br>test_data_file.close()<br>scorecard = []<br>for record in test_data_list:<br>    all_values = record.split(‘,’)<br>    correct_result = int(all_values[0])<br>    scale_input = (numpy.asfarray(all_values[1:]) / 255.0 * 0.99) + 0.01<br>    final_output = n.query(scale_input)<br>    label = numpy.argmax(final_output)<br>    if (label == correct_result):<br>        scorecard.append(1)<br>    else:<br>        scorecard.append(0)<br>    pass<br>scorecard_array = numpy.asarray(scorecard)<br>score = scorecard_array.sum() / scorecard_array.size<br>print(score)</p>
-<p><img src="/wozuicai.github.io/2019/12/08/third/3.png" alt="3"></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wozuicai.github.io/2019/12/08/third/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/wozuicai.github.io/2019/12/09/forth/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          forth
-        
-      </div>
-    </a>
   
   
-    <a href="/wozuicai.github.io/2019/12/08/second/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">second</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    目录，不存在的…
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -383,8 +214,8 @@ def query(self, input_list):
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
